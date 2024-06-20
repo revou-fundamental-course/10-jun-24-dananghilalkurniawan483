@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator Konversi Suhu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="calculator">
+        <div class="display">
+            <div id="hasil" class="output">0</div>
+            <div id="satuan" class="unit"></div>
+        </div>
+        <div class="buttons">
+            <button class="button number" onclick="appendToDisplay('7')">7</button>
+            <button class="button number" onclick="appendToDisplay('8')">8</button>
+            <button class="button number" onclick="appendToDisplay('9')">9</button>
+            <button class="button operator" onclick="clearDisplay()">AC</button>
+            <button class="button number" onclick="appendToDisplay('4')">4</button>
+            <button class="button number" onclick="appendToDisplay('5')">5</button>
+            <button class="button number" onclick="appendToDisplay('6')">6</button>
+            <button class="button operator" onclick="deleteLastCharacter()">&larr;</button>
+            <button class="button number" onclick="appendToDisplay('1')">1</button>
+            <button class="button number" onclick="appendToDisplay('2')">2</button>
+            <button class="button number" onclick="appendToDisplay('3')">3</button>
+            <button id="btnConvert" class="button operator" onclick="convert()">Konversi</button>
+            <button class="button number zero" onclick="appendToDisplay('0')">0</button>
+            <button class="button operator" onclick="appendToDisplay('.')">.</button>
+        </div>
+        <div class="controls">
+            <select id="skala_asal">
+                <option value="C">Celcius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <select id="skala_tujuan">
+                <option value="C">Celcius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
